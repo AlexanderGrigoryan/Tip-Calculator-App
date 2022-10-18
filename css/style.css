@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    background: #C5E4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0 40px;
+} 
+
+.calc {
+    padding: 0 33px;
+    width: 100%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 32px 43px 0px #4FA6AF33;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.title {
+    font-size: 16px;
+    line-height: 24px;
+    color:#5E7A7D;
+}
+
+.bill__title-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.bill__error {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #E17457;
+    display: none;
+}
+
+.bill__logo {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.bill__form {
+    height: 48px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0 32px;
+    background: #F3F9FA;
+    position: relative ;
+} 
+
+.bill__input  {
+    height: 100%;
+    text-align: right;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color:#00474B;
+    width: 100%;
+    background: transparent;
+    padding: 0 18px 0 24px;
+}
+
+.bill__input:focus {
+    outline: 2px solid #26C2AE;
+}
+ 
+.calc__tip {
+    margin-bottom: 16px;
+}
+
+.tip__buttons {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 16px;
+} 
+
+.tip__btn {
+    height: 48px;
+    width: 146.63px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #FFFFFF ;
+    background: #00474B;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.tip__btn:hover{
+    background: #9FE8DF;
+}
+
+.diff__color {
+    background: #26C2AE;
+    color: #00474B;
+}
+
+.tip__input {
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    padding-right: 17.33px;
+    background: #F3F9FA;
+    color: #547878;
+    height: 48px;
+    width: 146.63px;
+    border-radius: 5px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.tip__input:focus {
+    outline: 2px solid #26C2AE;
+}
+
+.people__title-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0 6px;
+}
+
+.people__error {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #E17457;
+    display: none;
+}
+
+.people__form {
+    height: 48px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F3F9FA;
+    position: relative;
+} 
+
+.people__logo {
+    position: absolute;
+    left: 20px;
+} 
+
+.people__input {
+    width: 100%;
+    height: 100%;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    padding-right: 17.33px;
+    background: #F3F9FA;
+    color: #547878;
+    padding: 0 18px 0 40px;
+} 
+
+.people__input:focus {
+    outline: 2px solid #26C2AE;
+}
+
+.total {
+    background: #00474B;
+    border-radius: 15px;
+    padding: 37px 24px 24px;
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.total__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-self: flex-start;
+    width: 100%;
+} 
+
+.total__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFFFFF;
+} 
+
+.total__text {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #7F9D9F ;
+} 
+
+.total__amount {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.6666666865348816px;
+    height: 47px;
+    text-align: right;
+    background: #00474B;
+    color: #26C2AE;
+} 
+
+.total__amount::placeholder {
+    color: #26C2AE;
+}
+
+.total__reset {
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #00474B;
+    background: #0D686D;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 100px 0 80px;
+    } 
+    
+    .tip__input, .tip__btn {
+        width: 175.63px;
+    }
+
+    .people__form {
+        margin-bottom: 32px;
+    }
+
+    .calc {
+        display: flex;
+        margin: 0 30px 0 30px;
+        max-width: 708px;
+        border-radius: 25px;
+    }
+
+    .total {
+        width: 100%;
+        margin-left: 23px;
+        max-width: 413px;
+        max-height: 433px;
+        justify-content: start;
+    }
+
+    .total__reset {
+        margin-top: 175px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tip__input, .tip__btn {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .tip__input, .tip__btn {
+        width: 117px;
+    }
+
+    .calc {
+        padding: 0 60px 0 60px;
+        max-width: 1160px;
+    }
+
+    .tip__btn {
+        width: 30%;
+    }
+
+    .tip__input {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .calc {
+        margin: 0 260px 0 260px;
+        max-width: 920px;
+    }
+
+    .bill__form {
+        margin: 6px 0 40px;
+    }
+
+    .people__title-form {
+        margin: 40px 0 6px;
+    }
+
+    .total__reset {
+        margin-top: 156px;
+    }
+}
+
+
